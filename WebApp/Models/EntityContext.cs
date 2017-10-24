@@ -6,13 +6,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace WebApp.Models
 {
-    public class PostContext : DbContext
+    public class EntityContext : DbContext
     {
-        public PostContext(DbContextOptions<PostContext> options)
+        public EntityContext(DbContextOptions<EntityContext> options)
             : base(options)
         {
         }   
 
-        public DbSet<PostsItem> PostsItems { get; set; }
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }
